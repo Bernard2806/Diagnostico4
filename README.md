@@ -1,0 +1,1 @@
+# Diagnostico Nº4 - Bernardo
