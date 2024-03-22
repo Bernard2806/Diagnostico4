@@ -51,8 +51,7 @@ namespace Diagnostico_Nº4___Bernardo
             return sel;
         }
 
-        private static void SelActivity(int seleccion)
-        {
+        private static void SelActivity(int seleccion){
             switch (seleccion){
 
                 case 1:
@@ -82,19 +81,18 @@ namespace Diagnostico_Nº4___Bernardo
         private static void Activity1() {
             string[] ListSongs = new string[5];
             int x = 0;
-            while (x < ListSongs.Length)
-            {
+            while (x < ListSongs.Length){
                 Console.Clear();
                 Console.WriteLine("Ingrese una Cancion [" + x + "]: ");
                 ListSongs[x] = Console.ReadLine();
                 x++;
             }
+            Console.Clear();
             Console.WriteLine("Acontinuacion se mostraran las canciones:");
             Console.ReadKey();
             Console.Clear();
             x = 0;
-            while (x < ListSongs.Length)
-            {
+            while (x < ListSongs.Length){
                 Console.WriteLine("Cancion [" + x + "]:" + ListSongs[x]);
                 x++;
             } 
@@ -107,26 +105,83 @@ namespace Diagnostico_Nº4___Bernardo
                 Console.WriteLine("Ingrese una Cancion [" + i + "]: ");
                 ListSongs[i] = Console.ReadLine();
             }
+            Console.Clear();
             Console.WriteLine("Acontinuacion se mostraran las canciones:");
             Console.ReadKey();
             Console.Clear();
             for (int x = 0; x < ListSongs.Length; x++) Console.WriteLine("Cancion [" + x + "]:" + ListSongs[x]);
         }
 
-        private static void Activity3()
-        {
-
+        private static void Activity3(){
+            string[] NameList = new string[5];
+            int[] AgeList = new int[5];
+            int x = 0;
+            while (x < NameList.Length){
+                Console.Clear();
+                Console.WriteLine("Ingrese el Nombre de la Persona [" + x + "]: ");
+                NameList[x] = Console.ReadLine();
+                Console.WriteLine("Ingrese la Edad de la Persona [" + x + "]: ");
+                AgeList[x] = int.Parse(Console.ReadLine());
+                x++;
+            }
+            Console.Clear();
+            Console.WriteLine("Acontinuacion se mostraran los Nombres y la Edad:");
+            Console.ReadKey();
+            Console.Clear();
+            x = 0;
+            while (x < NameList.Length)
+            {
+                Console.WriteLine("Persona Nº" + x);
+                Console.WriteLine("Nombre: " + NameList[x]);
+                Console.WriteLine("Edad: " + AgeList[x]);
+                x++;
+            }
         }
 
-        private static void Activity4()
-        {
-
+        private static void Activity4(){
+            string[] NameList = new string[5];
+            int[] AgeList = new int[5];
+            for(int i = 0; i < NameList.Length; i++){
+                Console.Clear();
+                Console.WriteLine("Ingrese el Nombre de la Persona [" + i + "]: ");
+                NameList[i] = Console.ReadLine();
+                Console.WriteLine("Ingrese la Edad de la Persona [" + i + "]: ");
+                AgeList[i] = int.Parse(Console.ReadLine());
+            }
+            Console.Clear();
+            Console.WriteLine("Acontinuacion se mostraran los Nombres y la Edad:");
+            Console.ReadKey();
+            Console.Clear();
+            for (int x = 0; x < NameList.Length; x++){
+                Console.WriteLine("Persona Nº" + x);
+                Console.WriteLine("Nombre: " + NameList[x]);
+                Console.WriteLine("Edad: " + AgeList[x]);
+            }
         }
 
-        private static void Activity5()
-        {
+        private static void Activity5(){
+            int[] ListNum1 = new int[5];
+            int[] ListNum2 = new int[5];
+            int[] ListRes = new int[5];
 
+            for(int i = 0; i < ListNum1.Length; i++){
+                Console.Clear();
+                Console.WriteLine("Pos: " + i);
+                Console.WriteLine("Ingrese el N1 para la suma:");
+                ListNum1[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el N2 para la suma:");
+                ListNum2[i] = int.Parse(Console.ReadLine());
+                ListRes[i] = ListNum1[i] + ListNum2[i];
+            }
+            Console.Clear();
+            Console.WriteLine("Acontinuacion se mostraran los resultados:");
+            Console.ReadKey();
+            Console.Clear();
+            for (int x = 0; x < ListNum1.Length; x++){
+                Console.WriteLine("Suma [" + x + "]: " + ListNum1[x] + " + " + ListNum2[x] + " = " + ListRes[x]);
+            }
         }
+
         private static void ExitProgram(){
             string ASCIIError = @"
             
