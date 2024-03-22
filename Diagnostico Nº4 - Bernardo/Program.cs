@@ -13,9 +13,7 @@ namespace Diagnostico_Nº4___Bernardo
     {
         static void Main(string[] args)
         {
-
-            do
-            {
+            do{
                 int i = PrintMenu();
                 SelActivity(i);
             } while (true);
@@ -77,24 +75,77 @@ namespace Diagnostico_Nº4___Bernardo
                     ExitProgram();
                     break;
             }
+            Console.WriteLine("Presione Cualquier Tecla para Continuar...");
             Console.ReadKey();
         }
 
         private static void Activity1() {
             string[] ListSongs = new string[5];
-
+            int x = 0;
+            while (x < ListSongs.Length)
+            {
+                Console.Clear();
+                Console.WriteLine("Ingrese una Cancion [" + x + "]: ");
+                ListSongs[x] = Console.ReadLine();
+                x++;
+            }
+            Console.WriteLine("Acontinuacion se mostraran las canciones:");
+            Console.ReadKey();
+            Console.Clear();
+            x = 0;
+            while (x < ListSongs.Length)
+            {
+                Console.WriteLine("Cancion [" + x + "]:" + ListSongs[x]);
+                x++;
+            } 
         }
 
-        private static void Activity2()
+        private static void Activity2(){
+            string[] ListSongs = new string[5];
+            for (int i = 0; i < ListSongs.Length; i++){
+                Console.Clear();
+                Console.WriteLine("Ingrese una Cancion [" + i + "]: ");
+                ListSongs[i] = Console.ReadLine();
+            }
+            Console.WriteLine("Acontinuacion se mostraran las canciones:");
+            Console.ReadKey();
+            Console.Clear();
+            for (int x = 0; x < ListSongs.Length; x++) Console.WriteLine("Cancion [" + x + "]:" + ListSongs[x]);
+        }
+
+        private static void Activity3()
         {
 
         }
 
+        private static void Activity4()
+        {
+
+        }
+
+        private static void Activity5()
+        {
+
+        }
         private static void ExitProgram(){
+            string ASCIIError = @"
+            
+      (    (        )   (     
+      )\ ) )\ )  ( /(   )\ )  
+ (   (()/((()/(  )\()) (()/(  
+ )\   /(_))/(_))((_)\   /(_)) 
+((_) (_)) (_))    ((_) (_))   
+| __|| _ \| _ \  / _ \ | _ \  
+| _| |   /|   / | (_) ||   /  
+|___||_|_\|_|_\  \___/ |_|_\  
+                              
+
+            ";
             Console.Clear();
-            Console.WriteLine("Saliendo del Programa");
-            for (int x = 0; x < 3; x++){
-                Thread.Sleep(1000);
+            if (Console.BackgroundColor == ConsoleColor.Red) Console.WriteLine(ASCIIError);
+            Console.Write("Saliendo del Programa");
+            for (int x = 0; x < 4; x++){
+                Thread.Sleep(500);
                 Console.Write(".");
             }
             Environment.Exit(0);
